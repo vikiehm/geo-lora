@@ -1,0 +1,8 @@
+dataset:
+  name: "faust"
+  used_type: "hard"
+  train_folder: "FAUST_r/"
+  val_folder: "FAUST_r/"
+  test_folder: "FAUST_r/"
+options:
+  save_model_name: "faust.pth"

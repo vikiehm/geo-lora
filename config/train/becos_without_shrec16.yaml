@@ -1,0 +1,31 @@
+dataset:
+  name: "shrec16"
+  train_folder: "BeCoS/full_full/train/"
+  val_folder: "SHREC16_test/"
+  pattern: None
+  # exclude all shrec16 data from becos data
+  red_list:
+    [
+      "cat[0-9]",
+      "dog[0-9]",
+      "michael[0-9]",
+      "david[0-9]",
+      "victoria[0-9]",
+      "wolf[0-9]",
+      "centaur[0-9]",
+      "horse[0-9]",
+      "cat.off",
+      "dog.off",
+      "michael.off",
+      "david.off",
+      "victoria.off",
+      "wolf.off",
+      "centaur.off",
+      "horse.off",
+    ]
+rendering:
+  partial_views: 4
+  partial_views_full: 9
+  num_partial_shapes: 2
+options:
+  save_model_name: "becos_without_shrec16"

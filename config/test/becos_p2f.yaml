@@ -1,0 +1,8 @@
+dataset:
+  name: "becos"
+  train_folder: "BeCoS/partial_full/train/"
+  val_folder: "BeCoS/partial_full/val/"
+  test_folder: "BeCoS/partial_full/test/"
+  mode: "p2f"
+options:
+  save_model_name: "becos.pth"

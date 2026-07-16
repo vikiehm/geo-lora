@@ -1,0 +1,11 @@
+dataset:
+  name: "faust"
+  train_folder: "FAUST_r/off/"
+  val_folder: "FAUST_r/"
+  pattern: None
+rendering:
+  partial_views: 4
+  partial_views_full: 9
+  num_partial_shapes: 2
+options:
+  save_model_name: "faust"

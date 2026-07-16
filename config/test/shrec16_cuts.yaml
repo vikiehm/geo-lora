@@ -1,0 +1,9 @@
+dataset:
+  name: "shrec16"
+  used_type: "cuts"
+  train_folder: "SHREC16"
+  val_folder: "SHREC16_test"
+  test_folder: "SHREC16_test"
+  mode: "p2f"
+options:
+  save_model_name: "becos_without_shrec16.pth"

@@ -1,0 +1,8 @@
+dataset:
+  name: "smal"
+  train_folder: "PARTIALSMAL/train/"
+  val_folder: "PARTIALSMAL/test/"
+  test_folder: "PARTIALSMAL/test/"
+  mode: "p2p"
+options:
+  save_model_name: "smal.pth"

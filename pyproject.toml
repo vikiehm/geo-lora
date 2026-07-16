@@ -1,0 +1,50 @@
+[project]
+name = "geolora"
+version = "0.1.0"
+description = "GeoLoRA (CVPR 2026): teaching DINOv3 about partial 3D geometry via self-supervised LoRA fine-tuning for partial 3D shape matching."
+readme = "README.md"
+requires-python = "==3.10.*"
+dependencies = [
+  "info-nce-pytorch>=0.1.4",
+  "setuptools",
+  "libigl==2.5.1",
+  "matplotlib",
+  "open3d>=0.19.0",
+  "pandas>=2.3.2",
+  "peft>=0.17.1",
+  "plyfile>=1.1.2",
+  "polyscope",
+  "potpourri3d>=1.3",
+  "robust-laplacian>=1.0.0",
+  "scikit-learn",
+  "torch>=2.7.1",
+  "torch-geometric>=2.6.1",
+  "torchvision",
+  "trimesh==4.5",
+  "wandb>=0.21.3",
+  "fast_simplification",
+  "pyvista",
+  "torchmetrics",
+  "termcolor",
+  "pytorch3d",
+]
+[tool.uv.extra-build-dependencies]
+pytorch3d = ["setuptools", "wheel", "ninja", "torch"]
+
+# pytorch3d builds CUDA extensions: set CUDA_HOME + TORCH_CUDA_ARCH_LIST before sync (see README); MAX_JOBS parallelises it.
+[tool.uv.extra-build-variables]
+pytorch3d = { MAX_JOBS = "16" }
+
+[[tool.uv.index]]
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
+explicit = true
+
+[tool.uv.sources]
+pytorch3d = { git = "https://github.com/facebookresearch/pytorch3d.git", rev = "stable" }
+torch = [
+  { index = "pytorch-cu118", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu118", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]

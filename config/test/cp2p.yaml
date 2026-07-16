@@ -1,0 +1,8 @@
+dataset:
+  name: "cp2p"
+  train_folder: "CP2P24/train/"
+  val_folder: "CP2P24_test_subset_100/"
+  test_folder: "CP2P24_test_subset_100/"
+  mode: "p2p"
+options:
+  save_model_name: "becos_without_shrec16.pth"

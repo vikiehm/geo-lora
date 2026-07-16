@@ -1,0 +1,25 @@
+# Machine-specific paths and settings.
+# Copy this file to config/paths.yaml and edit it for your machine.
+#   cp config/paths.example.yaml config/paths.yaml
+# config/paths.yaml is gitignored and never committed.
+
+dinov3:
+  # Local clone of https://github.com/facebookresearch/dinov3 (gated; request access).
+  repo_dir:       /path/to/dinov3
+  # Pretrained checkpoints downloaded from the DINOv3 model card.
+  vitb16_weights: /path/to/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth
+  vitl16_weights: /path/to/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth
+
+# Base directory for all datasets. The train/val/test_folder values in the
+# per-benchmark configs (config/train/*, config/test/*) are resolved relative to this.
+data_root: /path/to/datasets
+
+# Where training checkpoints are written, and where evaluation loads them from.
+# The save_model_name in test configs is resolved relative to this.
+save_folder: ./saved_models
+
+# Weights & Biases logging. Set enabled: false to disable logging entirely.
+wandb:
+  enabled: true
+  entity:  your-wandb-entity
+  project: geolora

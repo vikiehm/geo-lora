@@ -1,0 +1,29 @@
+# Python / env
+.venv/
+__pycache__/
+*/__pycache__/
+
+# Logs & experiment tracking
+logs/
+wandb/
+
+# Machine-specific config (copy from config/paths.example.yaml)
+config/paths.yaml
+
+# Training outputs / caches
+saved_models/
+geodesic_dist_matrices/
+features/
+*.csv
+
+# Editor / tool state
+imgui.ini
+.polyscope.ini
+uv.lock
+
+
+# Images
+*.png
+*.jpg
+*.jpeg
+config/paths_mine.yaml
